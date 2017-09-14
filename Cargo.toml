@@ -1,0 +1,32 @@
+[package]
+name = "crucibles"
+version = "0.1.0"
+authors = ["Michael Smith <michael@spinda.net>"]
+license = "MIT/Apache-2.0"
+readme = "README.md"
+keywords = ["future", "futures", "async", "tokio", "executor"]
+repository = "https://github.com/spinda/crucibles"
+homepage = "https://github.com/spinda/crucibles"
+documentation = "https://docs.rs/crucibles/0.1.0"
+description = """
+Nested Executors for Rust Futures
+"""
+categories = ["rust-patterns"]
+
+[badges]
+travis-ci = { repository = "spinda/crucibles" }
+appveyor = { repository = "spinda/crucibles" }
+
+[dependencies]
+futures = "0.1.15"
+
+[dependencies.clippy]
+version = "*"
+optional = true
+
+[dev-dependencies]
+tokio-core = "0.1"
+
+[features]
+default = []
+strict = ["clippy"]
